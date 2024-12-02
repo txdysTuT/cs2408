@@ -27,7 +27,8 @@
             <a href="https://hust.edu.cn" target="_blank"><img alt="HUST" height="50"
                                                                src="https://vi.hust.edu.cn/imgs/jc_icon1.png"/></a>
             <a href="https://cs.hust.edu.cn" target="_blank"><img alt="HUSTCS"
-                                                                  height="50" src="https://cs.hust.edu.cn/img/logo_news.png"/></a>
+                                                                  height="50"
+                                                                  src="https://cs.hust.edu.cn/img/logo_news.png"/></a>
             <h1>CS2408</h1></div>
         <div class="nav_bottom"></div>
     </nav>
@@ -42,11 +43,11 @@
         <div class="row">
             <div class="col-lg-2 col-md-12">
                 <div class="card">
-                    <h2>优秀作业</h2>
-                    <div class="card exhibitionCard" v-for="exhibition in exhibitions">
-                        <a target="_blank" v-bind:href="exhibition.url"><h1>{{exhibition.name}}</h1></a>
-                        <p>{{exhibition.dormitory}}</p>
-                        <p>{{exhibition.intro}}</p>
+                    <h2>随机推荐</h2>
+                    <div class="card randomCard" v-for="random in randoms[0]">
+                        <a target="_blank" v-bind:href="random.url"><h1>{{random.name}}</h1></a>
+                        <p>{{random.dormintory}}</p>
+                        <p>{{random.intro}}</p>
                     </div>
                 </div>
             </div>
@@ -62,10 +63,9 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-12">
-
                 <div class="card">
                     <h2>随机推荐</h2>
-                    <div class="card randomCard" v-for="random in randoms">
+                    <div class="card randomCard" v-for="random in randoms[1]">
                         <a target="_blank" v-bind:href="random.url"><h1>{{random.name}}</h1></a>
                         <p>{{random.dormintory}}</p>
                         <p>{{random.intro}}</p>
